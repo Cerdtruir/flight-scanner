@@ -35,7 +35,7 @@ class FlysafairJob < ApplicationJob
     selected_month = Date.today.month
     selected_year = Date.today.year
 
-    while selected_month != Date.today.month + 1 && selected_year != Date.today.year + 1
+    13.times do
       response = request(origin, destination, selected_month, selected_year)
       data = JSON.parse(response.read_body)
       add_data(data, origin, destination, selected_month, selected_year)
