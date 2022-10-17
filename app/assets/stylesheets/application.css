@@ -14,3 +14,8 @@
  *= require_tree .
  *= require_self
  */
+
+.lowest-price-highlight {
+  color: darkgoldenrod;
+  font-weight: 700;
+}
