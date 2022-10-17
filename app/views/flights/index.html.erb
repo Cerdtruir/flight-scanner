@@ -24,7 +24,7 @@
         <div>
           <%= flight.price %>
           <br>
-          <%= flight.airline %>
+          <%= link_to "#{flight.airline}", "https://www.#{flight.airline}.co.za/Flight/Search?interline=false&fromCityCode=#{params[:origin]}&toCityCode=#{params[:destination]}&departureDateString=#{flight.date}&adults=1&children=0&infants=0&roundTrip=false&allInclusive=&promocode=&isSpecialAssistanceRequired=false&fareTypes=&currency=ZAR&showMonthView=false&fareTypeCategory=", target: :_blank %>
         </div>
         <% end %>
       <% end %>
