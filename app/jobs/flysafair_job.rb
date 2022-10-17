@@ -40,12 +40,12 @@ class FlysafairJob < ApplicationJob
       data = JSON.parse(response.read_body)
       add_data(data, origin, destination, selected_month, selected_year)
 
-      selected_month += 1 if selected_month < 12
-
       if selected_month == 12
         selected_month = 1
         selected_year += 1
       end
+
+      selected_month += 1 if selected_month < 12
     end
   end
 
