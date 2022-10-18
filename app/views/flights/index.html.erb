@@ -28,7 +28,11 @@
         <% end %>
           R<%= flight.price %>
           <br>
-          <%= link_to "#{flight.airline}", "https://www.#{flight.airline}.co.za/Flight/Search?interline=false&fromCityCode=#{params[:origin]}&toCityCode=#{params[:destination]}&departureDateString=#{flight.date}&adults=1&children=0&infants=0&roundTrip=false&allInclusive=&promocode=&isSpecialAssistanceRequired=false&fareTypes=&currency=ZAR&showMonthView=false&fareTypeCategory=", target: :_blank %>
+          <% if flight.airline == 'FlySaFair'%>
+            <%= link_to "FlySaFair", "https://www.flysafair.co.za", target: :_blank %>
+          <% elsif flight.airline == 'Lift'%>
+            <%= link_to "Lift", "https://www.lift.co.za/" %>
+          <% end %>
         </div>
         <% end %>
       <% end %>
