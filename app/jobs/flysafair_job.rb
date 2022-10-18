@@ -21,9 +21,9 @@ class FlysafairJob < ApplicationJob
       if selected_month == 12
         selected_month = 1
         selected_year += 1
+      elsif selected_month < 12
+        selected_month += 1
       end
-
-      selected_month += 1 if selected_month < 12
     end
   end
 
