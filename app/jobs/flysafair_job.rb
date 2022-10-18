@@ -73,7 +73,7 @@ class FlysafairJob < ApplicationJob
 
         if (flight = Flight.where(origin:, destination:,
                                   date: Date.new(selected_year, selected_month, day_number)).first)
-          flight.update(price:, airline: 'FlySaFair')
+          flight.update(price:, airline: 'FlySaFair') if flight.price > price || flight.airline == 'FlySaFair'
         else
           Flight.create!(origin:, destination:, date: Date.new(selected_year, selected_month, day_number),
                          price:, airline: 'FlySaFair')
