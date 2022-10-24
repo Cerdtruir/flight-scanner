@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'flights#index'
+
+  resources :subscriptions, only: %i[new create]
 end
