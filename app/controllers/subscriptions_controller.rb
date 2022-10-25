@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
   def new
-    @subscription = subscription.new
+    @subscription = Subscription.new
     @origins = Flight.flysafair_routes.keys
   end
 
@@ -13,7 +13,7 @@ class SubscriptionsController < ApplicationController
                                                  .where(destination: params[:subscription][:destination])
                                                  .minimum(:price)
 
-    @subscription = subscription.new(subscription_params)
+    @subscription = Subscription.new(subscription_params)
     if @subscription.save
       if params[:subscription][:return] == '1'
         return_flight = create_return_flight_subscription(subscription_params, @subscription.id)
@@ -29,7 +29,7 @@ class SubscriptionsController < ApplicationController
   private
 
   def create_return_flight_subscription(params, other_flight_id)
-    return_flight = subscription.new(params)
+    return_flight = Subscription.new(params)
     return_flight.opposite_flight_id = other_flight_id
     return_flight.origin = params[:destination]
     return_flight.destination = params[:origin]
