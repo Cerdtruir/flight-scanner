@@ -20,6 +20,10 @@
   font-weight: 700;
 }
 
+h1 {
+  font-size: x-large;
+}
+
 @media screen and (max-width: 800px) {
   table {
     width:100%;
