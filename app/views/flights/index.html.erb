@@ -20,7 +20,7 @@
 </div>
 <% if params[:origin].present? && params[:destination].present? %>
   <%= month_calendar(attribute: :date, events: @flights) do |date, flights| %>
-    <%= date %>
+    <%= date.strftime("%d/%m") %>
     <%  @flights.each do |flight| %>
       <% if flight.date == date %>
         <% if flight.price == @lowest_flight_price %>
