@@ -24,6 +24,12 @@ form > * {
   margin-bottom: 2%;
   width: 200px;
 }
+
+input[type="submit"] {
+  border: 1px solid #ccc;
+  margin-bottom: 10%;
+}
+
 h1 {
   font-size: x-large;
 }
