@@ -1,23 +1,29 @@
-<h1>Get Flight Price Updates</h1>
+<h2>Get Flight Price Updates</h2>
 
 <%= form_with(model: @subscription, local: true) do |f| %>
   <br>
   <%= f.label :email %>
+  <br>
   <%= f.text_field :email %>
   <br>
   <%= f.label :origin %>
+  <br>
   <%= f.select :origin, options_for_select(@origins, params[:origin]), :include_blank => true %>
   <br>
   <%= f.label :destination %>
+  <br>
   <%= f.select :destination, options_for_select(@origins, params[:destination]), :include_blank => true %>
   <br>
-  <%= f.label :date_start %>
+  <%= f.label(:date_start, 'Date Start') %>
+  <br>
   <%= f.date_field :date_start %>
   <br>
-  <%= f.label :date_end %>
+  <%= f.label(:date_end, 'Date End') %>
+  <br>
   <%= f.date_field :date_end %>
   <br>
   <%= f.label(:return, "Track Return Flights?") %>
+  <br>
   <%= f.check_box :return %>
   <br>
   <%= f.submit "Get Price Updates" %>
