@@ -19,3 +19,21 @@
   color: darkgoldenrod;
   font-weight: 700;
 }
+
+@media screen and (max-width: 800px) {
+  table {
+    width:100%;
+  }
+  thead {
+    display: none;
+  }
+  tbody td {
+    display: block;
+    text-align:center;
+    width:100%;
+  }
+  .simple-calendar .day {
+    height: 100%;
+    width: 100%;
+  }
+}
