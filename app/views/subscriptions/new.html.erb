@@ -24,6 +24,9 @@
   <br>
   <%= f.label(:return, "Track Return Flights?") %>
   <br>
+  <%= f.check_box :return, :onchange => "document.getElementsByClassName('return-dates')[0].classList.toggle('toggle-return-dates')" %>
+  <br>
+  <div class="return-dates toggle-return-dates flex flex-col w-40">
     <%= f.label(:return_date_start, 'Return Date Start') %>
     <br>
     <%= f.date_field :return_date_start %>
@@ -32,6 +35,7 @@
     <br>
     <%= f.date_field :return_date_end%>
     <br>
+  </div>
   <br>
   <%= f.submit "Get Price Updates" %>
 <% end %>
