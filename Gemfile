@@ -80,3 +80,5 @@ gem 'sassc-rails'
 gem 'simple_calendar', '~> 2.4'
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "sucker_punch", "~> 3.1"

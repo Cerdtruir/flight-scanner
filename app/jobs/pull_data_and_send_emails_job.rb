@@ -1,9 +1,14 @@
 class PullDataAndSendEmailsJob < ApplicationJob
-  queue_as :default
+  include SuckerPunch::Job
 
   def perform
-    LiftJob.perform_now
-    FlysafairJob.perform_now
-    SendEmailsJob.perform_now
+    loop do
+      ActiveRecord::Base.connection_pool.with_connection do
+        LiftJob.perform_now
+        FlysafairJob.perform_now
+        SendEmailsJob.perform_now
+      end
+      sleep 15.minutes
+    end
   end
 end
