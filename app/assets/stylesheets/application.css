@@ -26,6 +26,8 @@
 
 form > * {
   margin-bottom: 2%;
+  width: 300px;
+}
 
 .return-dates {
   margin: 0 auto;
