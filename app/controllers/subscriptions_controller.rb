@@ -5,10 +5,7 @@ class SubscriptionsController < ApplicationController
   end
 
   def create
-    params[:subscription][:date_start] = params[:subscription][:date_start].to_date
-    params[:subscription][:date_end] = params[:subscription][:date_end].to_date
-
-    params[:subscription][:lowest_price] = Flight.where(date: params[:subscription][:date_start].to_date..params[:subscription][:date_end].to_date)
+    params[:subscription][:lowest_price] = Flight.where(date: params[:subscription][:date_start]..params[:subscription][:date_end])
                                                  .where(origin: params[:subscription][:origin])
                                                  .where(destination: params[:subscription][:destination])
                                                  .minimum(:price)
