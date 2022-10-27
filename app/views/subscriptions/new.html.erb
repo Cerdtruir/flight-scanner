@@ -4,29 +4,29 @@
   <br>
   <%= f.label :email %>
   <br>
-  <%= f.text_field :email %>
+  <%= f.text_field :email, :required => true %>
   <br>
   <%= f.label :origin %>
   <br>
-  <%= f.select :origin, options_for_select(@origins, params[:origin]), :include_blank => true %>
+  <%= f.select :origin, options_for_select(@origins, params[:origin]), { :include_blank => '-- Select Origin --' }, :required => true %>
   <br>
   <%= f.label :destination %>
   <br>
-  <%= f.select :destination, options_for_select(@origins, params[:destination]), :include_blank => true %>
+  <%= f.select :destination, options_for_select(@origins, params[:destination]), { :include_blank => '-- Select Destination --' }, :required => true %>
   <br>
   <%= f.label(:date_start, 'Date Start') %>
   <br>
-  <%= f.date_field :date_start %>
+  <%= f.date_field :date_start, :required => true %>
   <br>
   <%= f.label(:date_end, 'Date End') %>
   <br>
-  <%= f.date_field :date_end %>
+  <%= f.date_field :date_end, :required => true %>
   <br>
   <%= f.label(:return, "Track Return Flights?") %>
   <br>
   <%= f.check_box :return, :onchange => "document.getElementsByClassName('return-dates')[0].classList.toggle('toggle-return-dates')" %>
   <br>
-  <div class="return-dates toggle-return-dates flex flex-col w-40">
+  <div class="return-dates toggle-return-dates flex flex-col">
     <%= f.label(:return_date_start, 'Return Date Start') %>
     <br>
     <%= f.date_field :return_date_start %>
