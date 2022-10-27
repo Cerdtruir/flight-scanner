@@ -15,6 +15,10 @@
  *= require_self
  */
 
+.toggle-return-dates {
+  display: none;
+}
+
 .lowest-price-highlight {
   color: darkgoldenrod;
   font-weight: 700;
@@ -22,7 +26,11 @@
 
 form > * {
   margin-bottom: 2%;
-  width: 200px;
+  width: 300px;
+}
+
+.return-dates {
+  margin: 0 auto;
 }
 
 input[type="submit"] {

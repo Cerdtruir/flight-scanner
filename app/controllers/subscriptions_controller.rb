@@ -16,6 +16,8 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
     if @subscription.save
       if params[:subscription][:return] == '1'
+        params[:subscription][:date_start] = params[:subscription][:return_date_start]
+        params[:subscription][:date_end] = params[:subscription][:return_date_end]
         return_flight = create_return_flight_subscription(subscription_params, @subscription.id)
         @subscription.update!(opposite_flight_id: return_flight.id)
       end
