@@ -4,13 +4,13 @@
   <%= form_with(method: "get") do %>
     <%= label_tag(:query, "Select Origin") %>
         <br>
-    <%= select_tag "origin", options_for_select(@origins, params[:origin]), :include_blank => true, :onchange => "this.form.submit()" %>
+    <%= select_tag "origin", options_for_select(@origins, params[:origin]), :include_blank => true, :onchange => "this.form.requestSubmit()" %>
     <br>
     <br>
     <% if params[:origin].present? %>
       <%= label_tag(:query, "Select Destiniation") %>
           <br>
-      <%= select_tag "destination", options_for_select(@destinations, params[:destination]), :include_blank => true, :onchange => "this.form.submit()" %>  
+      <%= select_tag "destination", options_for_select(@destinations, params[:destination]), :include_blank => true, :onchange => "this.form.requestSubmit()" %>  
     <% end %>
   <% end %>
   <br>
