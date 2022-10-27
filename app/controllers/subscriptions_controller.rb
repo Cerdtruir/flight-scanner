@@ -22,7 +22,7 @@ class SubscriptionsController < ApplicationController
         @subscription.update!(opposite_flight_id: return_flight.id)
       end
 
-      redirect_to root_url, notice: 'You are now subscribed!'
+      redirect_to root_url, status: :see_other, notice: 'You are now subscribed!'
     else
       render :new
     end
