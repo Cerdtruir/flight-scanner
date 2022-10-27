@@ -24,7 +24,14 @@
   <br>
   <%= f.label(:return, "Track Return Flights?") %>
   <br>
-  <%= f.check_box :return %>
+    <%= f.label(:return_date_start, 'Return Date Start') %>
+    <br>
+    <%= f.date_field :return_date_start %>
+    <br>
+    <%= f.label(:return_date_end, 'Return Date End') %>
+    <br>
+    <%= f.date_field :return_date_end%>
+    <br>
   <br>
   <%= f.submit "Get Price Updates" %>
 <% end %>
