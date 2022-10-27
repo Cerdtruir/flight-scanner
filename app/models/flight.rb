@@ -12,4 +12,17 @@ class Flight < ApplicationRecord
       'MRU' => %w[JNB]
     }.freeze
   end
+
+  def self.create_return_flight_subscription(params, other_flight_id)
+    return_flight = Subscription.new(params)
+    return_flight.opposite_flight_id = other_flight_id
+    return_flight.origin = params[:destination]
+    return_flight.destination = params[:origin]
+    return_flight.lowest_price = Flight.where(date: return_flight.date_start..return_flight.date_end)
+                                       .where(origin: return_flight.origin)
+                                       .where(destination: return_flight.destination)
+                                       .minimum(:price)
+    return_flight.save
+    return_flight
+  end
 end
