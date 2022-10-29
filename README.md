@@ -1,24 +1,63 @@
-# README
+# Cheap Flight Scanner SOuth Africa
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Scans for cheap flights from South African local airlines
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby
+- Ruby On Rails
+- Tailwind CSS
+- Postgres
 
-* System dependencies
+## Live Demo
 
-* Configuration
+[Live Demo Link](https://cheap-flights-scanner.herokuapp.com/)
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps.
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby: 3.1.2
+- Rails: 7.0.4
 
-* Deployment instructions
+### Setup
 
-* ...
+- Clone the repository
+- Run `bundle install`
+- Run `rails db:create`
+- Run `rails db:migrate`
+- Add your own credentials to .env file
+  `EMAIL_USERNAME`,
+  `EMAIL_PASSWORD`, and
+  `SITE_URL`(for production)
+
+### Usage
+
+- Run `rails server`
+- Open `http://localhost:3000/` in your browser
+
+### Deployment
+
+- Deploy with heroku or your preferred hosting service
+
+## Authors
+
+👤 **N Ghoor**
+
+- GitHub: [@Cerdtruir](https://github.com/Cerdtruir)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
