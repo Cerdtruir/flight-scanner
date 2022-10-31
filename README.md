@@ -1,3 +1,7 @@
+# Cheap Flight Scanner South Africa
+
+> Scans for cheap flights from South African local airlines and notifies you via email.
+
 # Cheap Flight Scanner SOuth Africa
 
 > Scans for cheap flights from South African local airlines
@@ -6,6 +10,7 @@
 
 - Ruby
 - Ruby On Rails
+- Sucker Punch Gem For Background Jobs
 - Tailwind CSS
 - Postgres
 
