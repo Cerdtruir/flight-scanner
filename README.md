@@ -2,9 +2,9 @@
 
 > Scans for cheap flights from South African local airlines and notifies you via email.
 
-# Cheap Flight Scanner SOuth Africa
+## Screenshot
 
-> Scans for cheap flights from South African local airlines
+![screenshot](Screenshot.png)
 
 ## Built With
 
