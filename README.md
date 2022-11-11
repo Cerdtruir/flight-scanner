@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://cheap-flights-scanner.herokuapp.com/)
+[Live Demo Link](https://flight-tracker-gxnm.onrender.com/)
 
 ## Getting Started
 
