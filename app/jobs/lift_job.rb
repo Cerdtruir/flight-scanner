@@ -55,6 +55,7 @@ class LiftJob < ApplicationJob
       elsif selected_month < 12
         selected_month += 1
       end
+      sleep 1
     end
   end
 
