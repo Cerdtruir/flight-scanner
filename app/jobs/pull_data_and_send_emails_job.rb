@@ -1,12 +1,10 @@
 class PullDataAndSendEmailsJob < ApplicationJob
   def perform
     loop do
-      ActiveRecord::Base.connection_pool.with_connection do
-        LiftJob.perform_now
-        FlysafairJob.perform_now
-        SendEmailsJob.perform_now
-      end
-      sleep 15.minutes
+      LiftJob.perform_async
+      FlysafairJob.perform_async
+      sleep 30.minutes
+      SendEmailsJob.perform_now
     end
   end
 end
