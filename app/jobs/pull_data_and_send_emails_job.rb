@@ -1,6 +1,4 @@
 class PullDataAndSendEmailsJob < ApplicationJob
-  include SuckerPunch::Job
-
   def perform
     loop do
       ActiveRecord::Base.connection_pool.with_connection do
