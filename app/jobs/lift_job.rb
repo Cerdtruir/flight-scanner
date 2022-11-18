@@ -2,6 +2,8 @@ class LiftJob < ApplicationJob
   queue_as :default
 
   def perform
+    p 'Starting Lift Job'
+
     routes = {
       'CPT' => %w[JNB],
       'JNB' => %w[CPT DUR],
@@ -16,6 +18,7 @@ class LiftJob < ApplicationJob
         pull_route_flights(origin, destination, selected_month, selected_year)
       end
     end
+    p 'Finished Lift Job'
   end
 
   def request(url)
