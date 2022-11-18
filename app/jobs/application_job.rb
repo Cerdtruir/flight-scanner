@@ -6,4 +6,8 @@ class ApplicationJob < ActiveJob::Base
 
   # Most jobs are safe to ignore if the underlying records are no longer available
   # discard_on ActiveJob::DeserializationError
+
+  discard_on(StandardError) do |job, error|
+    p "Job #{job} failed with error #{error}"
+  end
 end

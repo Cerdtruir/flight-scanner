@@ -2,6 +2,7 @@ class FlysafairJob < ApplicationJob
   queue_as :default
 
   def perform
+    p 'FlysafairJob started'
     Flight.flysafair_routes.each do |origin, destinations|
       destinations.each do |destination|
         get_flights(origin, destination)
@@ -26,6 +27,7 @@ class FlysafairJob < ApplicationJob
       end
       sleep 1
     end
+    p 'FlysafairJob finished'
   end
 
   def request(origin, destination, month, year)
