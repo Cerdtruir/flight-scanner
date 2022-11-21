@@ -79,6 +79,8 @@ gem 'net-http'
 gem 'sassc-rails'
 gem 'simple_calendar', '~> 2.4'
 
-gem "tailwindcss-rails", "~> 2.0"
+gem 'rufus-scheduler', '~> 3.2'
 
-gem "sucker_punch", "~> 3.1"
+gem 'tailwindcss-rails', '~> 2.0'
+
+gem 'sucker_punch', '~> 3.1'
