@@ -10,7 +10,6 @@
 
 - Ruby
 - Ruby On Rails
-- Sucker Punch Gem For Background Jobs
 - Tailwind CSS
 - Postgres
 
@@ -35,8 +34,8 @@ To get a local copy up and running follow these simple example steps.
 - Run `rails db:migrate`
 - Add your own credentials to .env file
   `EMAIL_USERNAME`,
-  `EMAIL_PASSWORD`, and
-  `SITE_URL`(for production)
+  `EMAIL_PASSWORD`,
+  `SITE_URL`
 
 ### Usage
 
